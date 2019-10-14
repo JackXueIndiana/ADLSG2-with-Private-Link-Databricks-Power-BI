@@ -18,10 +18,13 @@ To enable users to runing different applications, such as Azure Storage Explorer
 To convience to the addmin, we use Azure Bastion (preview), which created a public IP address, named onbpocvnet-ip and a subnet 172.17.1.0/24. When the Bastion host is installed, you can access this VM from VM's Operation in Azure Portal.
 
 ## Azure Data Lake Storage Gen 2
-We create this ADLSG2 with private link. Pay attention here.
+We create this ADLSG2 with private link. Pay attention here. If you select Target subresource with value of blob, your private link FQDN will be *.blob.core.windows.net and late on you have to connect to the ADLSG2 as BLOB.
+
+If you select Target subresource with value of dfs, your private link FQDN will be *.dsf.core.windows.net and late on you have to connect to the ADLSG2 as DFS.
 
 | FQDN                             | Private IP |
 | ---------------------------------|:-----------|
 | onbpoclake.blob.core.windows.net | 172.17.0.5 |
+| onbpoclake.dfs.core.windows.net  | 172.17.0.6 |
 
 
