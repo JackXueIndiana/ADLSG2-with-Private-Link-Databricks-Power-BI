@@ -27,4 +27,6 @@ If you select Target subresource with value of dfs, your private link FQDN will 
 | onbpoclake.blob.core.windows.net | 172.17.0.5 |
 | onbpoclake.dfs.core.windows.net  | 172.17.0.6 |
 
-
+## Databricks
+We create the Azure Datarbicks Workspace with two subnet 172.17.2.0/24 for public subnet and 172.17.3.0/24 for private one. These subnets will be sufficient for us to create multiple clsuters late on. As per Databricsk (https://docs.azuredatabricks.net/administration-guide/cloud-configurations/azure/vnet-inject.html): 
+A workspace with a smaller virtual network can run out of IP addresses (network space) more quickly than a workspace with a larger virtual network. For example, a workspace with a /24 virtual network and /26 subnets can have a maximum of 64 nodes active at a time, whereas a workspace with a /20 virtual network and /22 subnets can house a maximum of 1024 nodes.
